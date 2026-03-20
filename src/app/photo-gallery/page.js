@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 
 /* ─── DATA ─────────────────────────────────────────────────────────────────── */
 const photos = [
-  { id:"01", category:"Art & Craft",   title:"Rainbow Finger Painting", emoji:"🎨", color:"#FF6B9D", bg:"#FFE4EF", size:"large",  description:"Little hands creating big colorful worlds on canvas." },
+  { id:"01", category:"Art & Craft",   title:"Rainbow Finger Painting", emoji:"🎨", color:"#0EA5E9", bg:"#E0F4FF", size:"large",  description:"Little hands creating big colorful worlds on canvas." },
   { id:"02", category:"Outdoor Play",  title:"Garden Explorers",        emoji:"🌻", color:"#F4A261", bg:"#FFF3CD", size:"small",  description:"Discovering nature's wonders in our sunny garden." },
-  { id:"03", category:"Music & Dance", title:"Rhythm & Moves",           emoji:"🎵", color:"#9B5DE5", bg:"#EDE0FA", size:"small",  description:"Tiny dancers making joyful music every morning." },
+  { id:"03", category:"Music & Dance", title:"Rhythm & Moves",           emoji:"🎵", color:"#FBBF24", bg:"#FEF9C3", size:"small",  description:"Tiny dancers making joyful music every morning." },
   { id:"04", category:"Art & Craft",   title:"Clay Creations",           emoji:"🏺", color:"#E76F51", bg:"#FCE4D6", size:"small",  description:"Sculpting masterpieces with little fingers." },
   { id:"05", category:"Outdoor Play",  title:"Water Play Day",           emoji:"💧", color:"#0096C7", bg:"#D6F0FA", size:"large",  description:"Splashing and learning about the world around us." },
-  { id:"06", category:"Celebrations",  title:"Birthday Parade",          emoji:"🎂", color:"#C77DFF", bg:"#F3E0FF", size:"small",  description:"Every birthday is a magical special celebration." },
+  { id:"06", category:"Celebrations",  title:"Birthday Parade",          emoji:"🎂", color:"#0EA5E9", bg:"#E0F4FF", size:"small",  description:"Every birthday is a magical special celebration." },
   { id:"07", category:"Science",       title:"Little Scientists",        emoji:"🔬", color:"#52B788", bg:"#DFFFD8", size:"small",  description:"Exploring how the wonderful world works together." },
-  { id:"08", category:"Music & Dance", title:"Puppet Show",              emoji:"🎭", color:"#F4872B", bg:"#FFF0D9", size:"small",  description:"Storytelling through imagination and creative play." },
+  { id:"08", category:"Music & Dance", title:"Puppet Show",              emoji:"🎭", color:"#FBBF24", bg:"#FEF9C3", size:"small",  description:"Storytelling through imagination and creative play." },
   { id:"09", category:"Science",       title:"Rainbow Experiments",      emoji:"🌈", color:"#457BE0", bg:"#E0ECFF", size:"small",  description:"Colors, light and wonderful scientific discoveries." },
   { id:"10", category:"Celebrations",  title:"Harvest Festival",         emoji:"🍂", color:"#D4720B", bg:"#FDE8D8", size:"small",  description:"Celebrating seasons and togetherness as a family." },
 ];
@@ -119,7 +119,7 @@ function PhotoCard({ photo, index }) {
 
       {/* ── Info Zone ── */}
       <div className="pg-card-body">
-        <h3 className="pg-card-title" style={{ color:"#1E1B3A" }}>{photo.title}</h3>
+        <h3 className="pg-card-title" style={{ color:"#1E2F3A" }}>{photo.title}</h3>
         <p className="pg-card-desc">{photo.description}</p>
         <div className="pg-card-bar" style={{
           width: hovered ? "56px" : "28px",
@@ -139,7 +139,7 @@ function Marquee() {
       <div className="pg-marquee-track">
         {doubled.map((item, i) => (
           <span key={i} className="pg-marquee-item">
-            <span style={{ color:"#FF6B9D" }}>✦</span>
+            <span style={{ color:"#0EA5E9" }}>✦</span>
             {item}
           </span>
         ))}
@@ -183,7 +183,7 @@ export default function PhotoGallery() {
 
         /* ── PAGE ── */
         .pg-section {
-          background: #F9F5EE;
+          background: #F0F9FF;
           font-family: 'Nunito', sans-serif;
           position: relative;
           overflow: hidden;
@@ -208,31 +208,31 @@ export default function PhotoGallery() {
         }
         .pg-badge {
           display: inline-block;
-          background: linear-gradient(135deg,#FF6B9D18,#FF6B9D38);
-          color: #FF6B9D;
+          background: linear-gradient(135deg,#0EA5E918,#0EA5E938);
+          color: #0EA5E9;
           font-family: 'Nunito', sans-serif;
           font-weight: 800;
           font-size: clamp(10px, 2vw, 12px);
           padding: 5px 16px; border-radius: 30px;
           margin-bottom: 14px; letter-spacing: 1px;
           text-transform: uppercase;
-          border: 1.5px solid #FF6B9D30;
+          border: 1.5px solid #0EA5E930;
         }
         .pg-title {
           font-family: 'Baloo 2', sans-serif;
           font-size: clamp(1.7rem, 5.5vw, 3.4rem);
-          font-weight: 800; color: #1E1B3A;
+          font-weight: 800; color: #1E2F3A;
           margin: 0 0 12px; line-height: 1.15;
         }
         .pg-title-grad {
-          background: linear-gradient(135deg,#FF6B9D,#9B5DE5);
+          background: linear-gradient(135deg,#0EA5E9,#FBBF24);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .pg-subtitle {
           font-family: 'Nunito', sans-serif;
           font-size: clamp(13px, 2.2vw, 16px);
-          color: #7A7A9A; line-height: 1.7; margin: 0;
+          color: #5A7A8A; line-height: 1.7; margin: 0;
         }
 
         /* ── FILTER ── */
@@ -248,16 +248,16 @@ export default function PhotoGallery() {
           background: #fff;
           padding: clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 24px);
           border-radius: 18px;
-          box-shadow: 0 4px 22px rgba(0,0,0,0.06);
+          box-shadow: 0 4px 22px rgba(14,165,233,0.10);
           width: 100%; max-width: 920px;
-          border: 1.5px solid rgba(155,93,229,0.08);
+          border: 1.5px solid rgba(14,165,233,0.10);
         }
         .pg-fb {
           display: flex; align-items: center;
           gap: 5px;
           padding: clamp(7px,1.5vw,10px) clamp(12px,2vw,20px);
           border: none; border-radius: 30px;
-          background: #F4F0FA; color: #7A7A9A;
+          background: #E0F4FF; color: #5A7A8A;
           font-family: 'Nunito', sans-serif;
           font-weight: 700;
           font-size: clamp(11px, 1.8vw, 13px);
@@ -265,11 +265,11 @@ export default function PhotoGallery() {
           white-space: nowrap; flex-shrink: 0;
           -webkit-tap-highlight-color: transparent;
         }
-        .pg-fb:hover  { background: #EDE0FA; color: #9B5DE5; }
+        .pg-fb:hover  { background: #BAE8FF; color: #0EA5E9; }
         .pg-fb.on {
-          background: linear-gradient(135deg,#FF6B9D,#9B5DE5);
+          background: linear-gradient(135deg,#0EA5E9,#FBBF24);
           color: #fff;
-          box-shadow: 0 4px 14px rgba(155,93,229,0.32);
+          box-shadow: 0 4px 14px rgba(14,165,233,0.32);
         }
         .pg-fb:active { transform: scale(0.96); }
 
@@ -285,20 +285,15 @@ export default function PhotoGallery() {
         .pg-col-large { grid-column: span 8; }
         .pg-col-small { grid-column: span 4; }
 
-        /* ── Tablet (≤1024px): 6-col ── */
         @media (max-width: 1024px) {
           .pg-grid { grid-template-columns: repeat(6, 1fr); }
           .pg-col-large { grid-column: span 6; }
           .pg-col-small { grid-column: span 3; }
         }
-
-        /* ── Landscape phone / small tablet (≤768px): 2-col equal ── */
         @media (max-width: 768px) {
           .pg-grid { grid-template-columns: repeat(2, 1fr); }
           .pg-col-large, .pg-col-small { grid-column: span 1; }
         }
-
-        /* ── Portrait phone (≤480px): 1-col ── */
         @media (max-width: 480px) {
           .pg-grid { grid-template-columns: 1fr; gap: 12px; }
           .pg-col-large, .pg-col-small { grid-column: span 1; }
@@ -324,7 +319,6 @@ export default function PhotoGallery() {
         .pg-card-visual.large {
           height: clamp(180px, 26vw, 280px);
         }
-        /* On mobile, equalize heights */
         @media (max-width: 768px) {
           .pg-card-visual,
           .pg-card-visual.large { height: clamp(140px, 38vw, 220px); }
@@ -363,7 +357,7 @@ export default function PhotoGallery() {
         .pg-card-desc {
           font-family: 'Nunito', sans-serif;
           font-size: clamp(11px, 1.6vw, 13px);
-          color: #9A9AB0; margin: 0;
+          color: #7A9AAA; margin: 0;
           line-height: 1.55; flex: 1;
         }
         .pg-card-bar {
@@ -375,8 +369,8 @@ export default function PhotoGallery() {
         /* ── MARQUEE ── */
         .pg-marquee-wrap {
           overflow: hidden;
-          border-top: 1.5px dashed rgba(155,93,229,0.14);
-          border-bottom: 1.5px dashed rgba(155,93,229,0.14);
+          border-top: 1.5px dashed rgba(14,165,233,0.18);
+          border-bottom: 1.5px dashed rgba(14,165,233,0.18);
           padding: 13px 0;
           margin: clamp(36px, 6vw, 64px) 0;
           background: rgba(255,255,255,0.55);
@@ -392,7 +386,7 @@ export default function PhotoGallery() {
           font-family: 'Nunito', sans-serif;
           font-size: clamp(9px, 1.5vw, 11px);
           letter-spacing: 0.2em; text-transform: uppercase;
-          color: rgba(100,80,160,0.38);
+          color: rgba(14,100,160,0.38);
           padding: 0 22px; white-space: nowrap; font-weight: 700;
         }
 
@@ -404,12 +398,12 @@ export default function PhotoGallery() {
           margin: 0 auto clamp(40px, 6vw, 64px);
           background: #fff;
           border-radius: clamp(14px, 2vw, 20px);
-          box-shadow: 0 4px 28px rgba(155,93,229,0.08);
+          box-shadow: 0 4px 28px rgba(14,165,233,0.10);
           overflow: hidden;
           position: relative; z-index: 1;
-          border: 1.5px solid rgba(155,93,229,0.09);
+          border: 1.5px solid rgba(14,165,233,0.10);
         }
-        .pg-stat-div { border-left: 1.5px solid rgba(155,93,229,0.08); }
+        .pg-stat-div { border-left: 1.5px solid rgba(14,165,233,0.10); }
         @media (max-width: 640px) {
           .pg-stats { grid-template-columns: repeat(2,1fr); }
           .pg-stat-div:nth-child(3) { border-left: none; }
@@ -424,13 +418,13 @@ export default function PhotoGallery() {
           font-family: 'Baloo 2', sans-serif;
           font-size: clamp(22px, 4vw, 38px);
           font-weight: 800; line-height: 1;
-          background: linear-gradient(135deg,#FF6B9D,#9B5DE5);
+          background: linear-gradient(135deg,#0EA5E9,#FBBF24);
           -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .pg-stat-label {
           font-family: 'Nunito', sans-serif;
           font-size: clamp(9px, 1.5vw, 11px);
-          color: #9A9AB0; letter-spacing: 0.1em;
+          color: #7A9AAA; letter-spacing: 0.1em;
           text-transform: uppercase; font-weight: 700;
           text-align: center;
         }
@@ -447,13 +441,13 @@ export default function PhotoGallery() {
           border-radius: 50px;
           font-family: 'Baloo 2', sans-serif;
           font-size: clamp(13px, 2vw, 15px); font-weight: 800;
-          background: linear-gradient(135deg,#FF6B9D,#9B5DE5);
+          background: linear-gradient(135deg,#0EA5E9,#FBBF24);
           color: #fff; border: none; cursor: pointer; text-decoration: none;
-          box-shadow: 0 6px 22px rgba(255,107,157,0.32);
+          box-shadow: 0 6px 22px rgba(14,165,233,0.35);
           transition: transform 0.2s, box-shadow 0.2s;
           -webkit-tap-highlight-color: transparent;
         }
-        .pg-cta-primary:hover  { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,107,157,0.4); }
+        .pg-cta-primary:hover  { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(14,165,233,0.45); }
         .pg-cta-primary:active { transform: scale(0.97); }
         .pg-cta-secondary {
           display: inline-flex; align-items: center; gap: 8px;
@@ -461,17 +455,16 @@ export default function PhotoGallery() {
           border-radius: 50px;
           font-family: 'Baloo 2', sans-serif;
           font-size: clamp(13px, 2vw, 15px); font-weight: 700;
-          background: #fff; color: #9B5DE5;
-          border: 1.5px solid rgba(155,93,229,0.22);
+          background: #fff; color: #0EA5E9;
+          border: 1.5px solid rgba(14,165,233,0.25);
           cursor: pointer; text-decoration: none;
           box-shadow: 0 2px 10px rgba(0,0,0,0.05);
           transition: all 0.22s ease;
           -webkit-tap-highlight-color: transparent;
         }
-        .pg-cta-secondary:hover  { background: #F4F0FA; border-color: rgba(155,93,229,0.45); }
+        .pg-cta-secondary:hover  { background: #E0F4FF; border-color: rgba(14,165,233,0.5); }
         .pg-cta-secondary:active { transform: scale(0.97); }
 
-        /* ── Touch: no hover jitter ── */
         @media (hover: none) {
           .pg-card:hover { transform: none !important; box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important; }
         }
@@ -479,9 +472,9 @@ export default function PhotoGallery() {
 
       <section className="pg-section">
         {/* blobs */}
-        <div className="pg-blob" style={{ width:"clamp(160px,28vw,320px)", height:"clamp(160px,28vw,320px)", top:"-60px", right:"-60px", background:"radial-gradient(circle,#FF6B9D10 0%,transparent 70%)", animationDelay:"0s" }} />
-        <div className="pg-blob" style={{ width:"clamp(120px,22vw,260px)", height:"clamp(120px,22vw,260px)", bottom:"8%", left:"-50px", background:"radial-gradient(circle,#9B5DE510 0%,transparent 70%)", animationDelay:"3s" }} />
-        <div className="pg-blob" style={{ width:"clamp(100px,18vw,200px)", height:"clamp(100px,18vw,200px)", top:"42%", right:"4%", background:"radial-gradient(circle,#F4A26110 0%,transparent 70%)", animationDelay:"5.5s" }} />
+        <div className="pg-blob" style={{ width:"clamp(160px,28vw,320px)", height:"clamp(160px,28vw,320px)", top:"-60px", right:"-60px", background:"radial-gradient(circle,#0EA5E912 0%,transparent 70%)", animationDelay:"0s" }} />
+        <div className="pg-blob" style={{ width:"clamp(120px,22vw,260px)", height:"clamp(120px,22vw,260px)", bottom:"8%", left:"-50px", background:"radial-gradient(circle,#FBBF2412 0%,transparent 70%)", animationDelay:"3s" }} />
+        <div className="pg-blob" style={{ width:"clamp(100px,18vw,200px)", height:"clamp(100px,18vw,200px)", top:"42%", right:"4%", background:"radial-gradient(circle,#0096C710 0%,transparent 70%)", animationDelay:"5.5s" }} />
 
         {/* ── HEADER ── */}
         <div
