@@ -5,6 +5,7 @@ import AchievementsSection from "./components/AchievementsSection";
 import GallerySection from "./components/GallerySection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
+import LocationSection from "./components/location";
 
 export default function Home() {
   return (
@@ -12,10 +13,12 @@ export default function Home() {
       <HeroSection />
       <RenownedSection />
       <ProgramsSection />
-      <AchievementsSection />
+      {/* <AchievementsSection />
       <GallerySection />
       <TestimonialsSection />
-      <ContactSection />
+      <ContactSection /> */}
+      <LocationSection />
+      
     </main>
   );
 }

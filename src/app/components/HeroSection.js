@@ -40,7 +40,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* 🌊 CURVED BOTTOM CUT */}
+      {/* 🌊 CURVED BOTTOM — #eef2ff = indigo-50, exactly matches RenownedSection bg start */}
       <div className="absolute bottom-0 left-0 w-full">
         <svg
           viewBox="0 0 1440 320"
@@ -48,7 +48,7 @@ export default function HeroSection() {
           preserveAspectRatio="none"
         >
           <path
-            fill="#ffffff"
+            fill="#eef2ff"
             d="M0,224C60,200 120,260 180,240C240,220 300,180 360,200C420,220 480,260 540,240C600,220 660,180 720,200C780,220 840,260 900,240C960,220 1020,180 1080,200C1140,220 1200,260 1260,240C1320,220 1380,200 1440,220L1440,320L0,320Z"
           />
         </svg>
