@@ -1,5 +1,8 @@
 "use client";
 
+import RenownedSection from "./Renownedsection"
+
+
 export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-screen overflow-hidden bg-black flex items-center justify-center">
@@ -15,6 +18,7 @@ export default function Hero() {
       >
         <source src="/hero.mp4" type="video/mp4" />
       </video>
+      <RenownedSection/>
     </section>
   );
 }
