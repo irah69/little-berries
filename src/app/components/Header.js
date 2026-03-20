@@ -1,5 +1,6 @@
 'use client';
 import * as React from "react"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ChevronRight } from "lucide-react"
@@ -38,7 +39,13 @@ const Header = ({ isHomePage = false }) => {
   const [scrolled, setScrolled] = useState(false)
   const [activeLink, setActiveLink] = useState("Home")
 
-  const navLinks = ["Home", "Administration", "Faculty", "Parents & Students", "Photo Gallery"]
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Administration", href: "/administration" },
+    { label: "Faculty", href: "/faculty" },
+    { label: "Parents & Students", href: "/parents-&-students" },
+    { label: "Photo Gallery", href: "/photo-gallery" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -65,25 +72,25 @@ const Header = ({ isHomePage = false }) => {
             <nav className="hidden lg:flex items-center space-x-12">
               {navLinks.map((item, index) => (
                 <motion.div
-                  key={item}
+                  key={item.label}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
-                  <a
-                    href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                    onClick={() => setActiveLink(item)}
+                  <Link
+                    href={item.href}
+                    onClick={() => setActiveLink(item.label)}
                     className={`relative text-xl font-bold transition-all duration-300 group whitespace-nowrap ${
-                      activeLink === item ? "text-[#ffe066]" : "text-black hover:text-[#ffe066]"
+                      activeLink === item.label ? "text-[#ffe066]" : "text-black hover:text-[#ffe066]"
                     }`}
                   >
-                    {item}
+                    {item.label}
                     <span
                       className={`absolute -bottom-1 left-0 h-0.5 bg-[#ffe066] transition-all duration-300 ${
-                        activeLink === item ? "w-full" : "w-0 group-hover:w-full"
+                        activeLink === item.label ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     />
-                  </a>
+                  </Link>
                 </motion.div>
               ))}
             </nav>
