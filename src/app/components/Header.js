@@ -54,72 +54,40 @@ const Header = ({ isHomePage = false }) => {
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${headerBg}`} style={{ backgroundColor: '#e3f0fa' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <a href="/" className="flex items-center gap-2">
-           <img src="/logo.jpeg" alt="Little Berries Logo" className="h-10 w-10 rounded-full shadow" />
 
-          </a>
-
-          {/* Logo */}
-          {/* <motion.div
-            className="flex items-center space-x-2 relative"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="relative">
-              <motion.div
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex items-center justify-center shadow-lg border-2 border-yellow-400"
-                whileHover={{ rotate: 10, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-              >
-                 <img src="/logo.jpeg" alt="Little Berries Logo" className="h-10 w-10 rounded-full shadow" />
-              </motion.div>
-              <FloatingStar delay={0} duration={2} />
-            </div>
-
-            <div className="flex flex-col leading-tight">
-              <h1 className="text-lg font-extrabold tracking-wide">
-                {["L","I","T","T","L","E"].map((l, i) => (
-                  <span key={i} style={{ color: ["#FF6B6B","#FFD93D","#6BCB77","#4D96FF","#FF6B6B","#FFD93D"][i] }}>{l}</span>
-                ))}
-                {" "}
-                {["B","E","R","R","I","E","S"].map((l, i) => (
-                  <span key={i} style={{ color: ["#6BCB77","#4D96FF","#FF6B6B","#FFD93D","#6BCB77","#4D96FF","#FF6B6B"][i] }}>{l}</span>
-                ))}
-              </h1>
-              <p className="text-[10px] text-yellow-300 font-semibold italic -mt-0.5 tracking-wide">
-                Brings Out The Best in You...
-              </p>
-            </div>
-          </motion.div> */}
-
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            {navLinks.map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-              >
-                <a
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  onClick={() => setActiveLink(item)}
-                  className={`relative text-sm font-semibold transition-all duration-300 group whitespace-nowrap ${
-                    activeLink === item ? "text-yellow-300" : "text-black hover:text-yellow-300"
-                  }`}
+        <div className="flex items-center justify-between h-24 w-full">
+          {/* Logo + Nav Grouped */}
+          <div className="flex items-center gap-6">
+            <a href="/" className="flex items-center gap-12">
+              <img src="/logo.jpeg" alt="Little Berries Logo" className="h-16 w-16 rounded-full shadow" />
+            </a>
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center space-x-12">
+              {navLinks.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
-                  {item}
-                  <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-yellow-300 transition-all duration-300 ${
-                      activeLink === item ? "w-full" : "w-0 group-hover:w-full"
+                  <a
+                    href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                    onClick={() => setActiveLink(item)}
+                    className={`relative text-xl font-bold transition-all duration-300 group whitespace-nowrap ${
+                      activeLink === item ? "text-[#ffe066]" : "text-black hover:text-[#ffe066]"
                     }`}
-                  />
-                </a>
-              </motion.div>
-            ))}
-          </nav>
+                  >
+                    {item}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-[#ffe066] transition-all duration-300 ${
+                        activeLink === item ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </a>
+                </motion.div>
+              ))}
+            </nav>
+          </div>
 
           {/* CTA Button */}
           <motion.div
@@ -129,7 +97,7 @@ const Header = ({ isHomePage = false }) => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <motion.button
-              className="group relative overflow-hidden px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-purple-900 font-extrabold text-sm shadow-lg border-2 border-yellow-300"
+              className="group relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-purple-900 font-extrabold text-xl shadow-lg border-2 border-yellow-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

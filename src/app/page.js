@@ -1,5 +1,5 @@
 import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
+import RenownedSection from "./components/Renownedsection";
 import ProgramsSection from "./components/ProgramsSection";
 import AchievementsSection from "./components/AchievementsSection";
 import GallerySection from "./components/GallerySection";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full bg-[#f8fafc]">
       <HeroSection />
-      <AboutSection />
+      <RenownedSection />
       <ProgramsSection />
       <AchievementsSection />
       <GallerySection />
