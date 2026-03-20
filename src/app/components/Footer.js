@@ -21,9 +21,11 @@ export default function Footer() {
         
         {/* 🫐 Brand Section */}
         <div>
-          <h2 className="text-2xl font-extrabold text-black mb-2">
-            Little Berries Playschool
-          </h2>
+            {/* 🍓 Brand */}
+            <div className="flex items-center gap-2 mb-4">
+              <img src="/logo.jpeg" alt="Little Berries Logo" className="h-15 w-15 rounded-full shadow" />
+              <span className="font-extrabold text-lg text-purple-900 tracking-tight">Little Berries Playschool</span>
+            </div>
           <p className="text-sm text-gray-600">
             A joyful place where little minds learn, play, and grow with love and care 🌈
           </p>
@@ -39,18 +41,28 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/activities" className="hover:text-yellow-400 transition">
-                Activities
+              <a href="/administration" className="hover:text-yellow-400 transition">
+                Administration
               </a>
             </li>
             <li>
-              <a href="/achivements" className="hover:text-yellow-400 transition">
-                Achievements
+              <a href="/infrastructure" className="hover:text-yellow-400 transition">
+                Infrastructure
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-yellow-400 transition">
-                Contact
+              <a href="/parents-&-students" className="hover:text-yellow-400 transition">
+                Parents & Students
+              </a>
+            </li>
+            <li>
+              <a href="/photo-gallery" className="hover:text-yellow-400 transition">
+                Photo Gallery
+              </a>
+            </li>
+            <li>
+              <a href="/contactus" className="hover:text-yellow-400 transition">
+                Contact Us
               </a>
             </li>
           </ul>

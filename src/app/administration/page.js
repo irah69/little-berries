@@ -267,17 +267,31 @@ export default function Administration() {
     <div className="lb-page">
 
       {/* Hero */}
-      <div className="lb-hero">
-        <div className="lb-hero-content">
-          <div className="lb-badge">Our Team</div>
-          <h1 className="lb-hero-title">Administration</h1>
-          <p className="lb-hero-sub">
-            Meet the dedicated leaders who make Little Berries a place of joy,
-            learning, and endless possibilities for every child.
-          </p>
-        </div>
-        <div className="lb-hero-emoji">🏫</div>
-      </div>
+<div className="lb-hero relative overflow-hidden">
+
+  {/* Background Image */}
+  <img
+    src="/adminhero.png"
+    alt="Hero Background"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  {/* Optional overlay (for readability) */}
+  <div className="absolute inset-0 bg-black/30 z-10"></div>
+
+  {/* Content */}
+  <div className="lb-hero-content relative z-20">
+    <div className="lb-badge">Our Team</div>
+    <h1 className="lb-hero-title">Administration</h1>
+    <p className="lb-hero-sub">
+      Meet the dedicated leaders who make Little Berries a place of joy,
+      learning, and endless possibilities for every child.
+    </p>
+  </div>
+
+  {/* Emoji */}
+  <div className="lb-hero-emoji relative z-20">🏫</div>
+</div>
 
       {/* Stats */}
       <div className="lb-stats">
@@ -380,13 +394,7 @@ export default function Administration() {
       </div>
 
       {/* Footer */}
-      <footer className="lb-footer">
-        <div className="lb-footer-brand">
-          <span>🍓</span>
-          <span>Little Berries</span>
-        </div>
-        <p className="lb-footer-text">© 2026 Little Berries Playschool. All rights reserved.</p>
-      </footer>
+    
     </div>
   );
 }

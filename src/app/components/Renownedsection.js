@@ -164,13 +164,16 @@ export default function RenownedSection() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 pt-1" style={{ animation: "fadeUp 0.7s ease 0.95s both" }}>
-              <button className="group inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-extrabold text-base px-8 py-4 rounded-full shadow-lg shadow-yellow-300/60 border-2 border-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95">
+              <a
+                href="/contactus"
+                className="group inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-extrabold text-base px-8 py-4 rounded-full shadow-lg shadow-yellow-300/60 border-2 border-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95"
+              >
                 📋 Enroll Now
                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                   fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </button>
+              </a>
               <a
                 href="tel:7989523822"
                 className="inline-flex items-center gap-2 bg-purple-700 hover:bg-purple-800 text-white font-extrabold text-base px-7 py-4 rounded-full shadow-lg shadow-purple-400/40 transition-all duration-300 hover:-translate-y-1 active:scale-95"

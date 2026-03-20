@@ -403,7 +403,7 @@ function BottomBanner() {
           </div>
 
           <a
-            href="tel:7989523822"
+            href="/contactus"
             className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-extrabold px-7 py-3.5 rounded-full shadow-lg shadow-yellow-400/30 transition-all duration-200 hover:-translate-y-1 whitespace-nowrap"
             style={{ fontFamily: "'Baloo 2', cursive" }}
           >
@@ -457,7 +457,7 @@ export default function ActivitiesSection() {
           ))}
         </div>
 
-        <BottomBanner />
+      
       </div>
 
       <style>{`

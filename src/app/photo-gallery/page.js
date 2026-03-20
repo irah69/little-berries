@@ -526,18 +526,18 @@ export default function PhotoGallery() {
         <Marquee />
 
         {/* ── STATS ── */}
-        <div className="pg-stats">
+{/*         <div className="pg-stats">
           {stats.map((s, i) => (
             <div key={s.label} className={i > 0 ? "pg-stat-div" : ""}>
               <Stat stat={s} index={i} />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* ── CTA ── */}
         <div className="pg-cta-wrap">
           <a href="/admissions" className="pg-cta-primary">✦ Join Our Family</a>
-          <a href="/contact" className="pg-cta-secondary">Contact Us →</a>
+          <a href="/contactus" className="pg-cta-secondary">Contact Us →</a>
         </div>
       </section>
     </>

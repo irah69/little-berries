@@ -15,7 +15,7 @@ const Header = ({ isHomePage = false }) => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Administration", href: "/administration" },
-    { label: "Faculty", href: "/faculty" },
+    { label: "Infrastructure", href: "/infrastructure" },
     { label: "Parents & Students", href: "/parents-&-students" },
     { label: "Photo Gallery", href: "/photo-gallery" },
   ]
@@ -87,17 +87,20 @@ const Header = ({ isHomePage = false }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <motion.button
-                className="group relative overflow-hidden px-6 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-purple-900 font-extrabold text-base shadow-lg border-2 border-yellow-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10 flex items-center gap-1">
-                  <span>Admissions</span>
-                  <ChevronRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.button>
+              <Link href="/contactus">
+                <motion.button
+                  className="group relative overflow-hidden px-6 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-purple-900 font-extrabold text-base shadow-lg border-2 border-yellow-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  type="button"
+                >
+                  <span className="relative z-10 flex items-center gap-1">
+                    <span>Admissions</span>
+                    <ChevronRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* ── Hamburger (below xl) ── */}
