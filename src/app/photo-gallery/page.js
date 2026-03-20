@@ -57,7 +57,7 @@ export default function PhotoGallery() {
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { box-sizing: border-box; }
 
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(28px); }
@@ -100,16 +100,17 @@ export default function PhotoGallery() {
                     margin:0 auto; line-height:1.7; padding:0 8px; }
 
         /* FILTER */
-        .pg-fw { display:flex; justify-content:center; padding:0 12px 28px; position:relative; z-index:1; }
-        .pg-fs { display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
-                 background:white; padding:10px 14px;
-                 border-radius:20px; box-shadow:0 4px 24px rgba(0,0,0,.08); max-width:100%; }
-        .pg-fb { display:flex; align-items:center; gap:5px; padding:7px 13px; border:none;
-                 border-radius:30px; background:transparent; color:#7A7A9A;
-                 font-family:'Nunito',sans-serif; font-weight:600; font-size:clamp(11px,2.6vw,13px);
+        .pg-fw { display:flex; justify-content:center; padding:0 20px 40px; position:relative; z-index:1; }
+        .pg-fs { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; align-items:center;
+                 background:white; padding:20px 28px;
+                 border-radius:24px; box-shadow:0 6px 30px rgba(0,0,0,.09); max-width:860px; width:100%; }
+        .pg-fb { display:flex; align-items:center; gap:7px; padding:11px 22px; border:none;
+                 border-radius:30px; background:#F6F4FB; color:#7A7A9A;
+                 font-family:'Nunito',sans-serif; font-weight:700; font-size:clamp(12px,1.5vw,14px);
                  cursor:pointer; transition:all .2s ease; white-space:nowrap; flex-shrink:0; -webkit-tap-highlight-color:transparent; }
         .pg-fb.on { background:linear-gradient(135deg,#FF6B9D,#9B5DE5); color:white;
                     box-shadow:0 4px 14px rgba(155,93,229,.35); }
+        @media(min-width:700px){ .pg-fs { flex-wrap:nowrap; } }
 
         /* GRID */
         .pg-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,268px),1fr));
