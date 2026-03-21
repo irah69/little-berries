@@ -68,6 +68,8 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content="/logo.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/logo.jpeg" />
+        <link rel="icon" href="/logo.jpeg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/logo.jpeg" type="image/jpeg" />
       </head>
       <body className="min-h-full flex flex-col">
         <Header />
