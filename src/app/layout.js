@@ -1,4 +1,3 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -17,21 +16,35 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://littleberries.com"),
-  title: "Little Berries Playschool | Joyful Early Learning in [Your City]",
-  description: "Little Berries Playschool offers a nurturing, creative, and safe environment for children to learn, play, and grow. Discover our activities, achievements, and caring staff.",
+
+  title: {
+    default: "Little Berries Playschool",
+    template: "%s | Little Berries Playschool",
+  },
+
+  description:
+    "Little Berries Playschool offers a nurturing, creative, and safe environment for children to learn, play, and grow.",
+
   keywords: [
     "playschool",
     "preschool",
-    "early childhood education",
-    "kids activities",
-    "child care",
-    "learning",
+    "kids school",
+    "early education",
     "Little Berries",
-    "[Your City]"
   ],
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
+
   openGraph: {
-    title: "Little Berries Playschool | Joyful Early Learning in [Your City]",
-    description: "Little Berries Playschool offers a nurturing, creative, and safe environment for children to learn, play, and grow.",
+    title: "Little Berries Playschool",
+    description:
+      "A nurturing, creative, and safe environment for early learning.",
     url: "https://littleberries.com",
     siteName: "Little Berries Playschool",
     images: [
@@ -39,20 +52,28 @@ export const metadata = {
         url: "/logo.jpeg",
         width: 400,
         height: 400,
-        alt: "Little Berries Playschool Logo"
-      }
+        alt: "Little Berries Logo",
+      },
     ],
     locale: "en_US",
-    type: "website"
+    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Little Berries Playschool | Joyful Early Learning in [Your City]",
-    description: "Little Berries Playschool offers a nurturing, creative, and safe environment for children to learn, play, and grow.",
-    images: ["/logo.jpeg"]
-  }
-};
+    title: "Little Berries Playschool",
+    description:
+      "A nurturing, creative, and safe environment for early learning.",
+    images: ["/logo.jpeg"],
+  },
 
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  authors: [{ name: "Little Berries Playschool" }],
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -60,18 +81,6 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Little Berries Playschool" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Little Berries Playschool" />
-        <meta property="og:image" content="/logo.jpeg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/logo.jpeg" />
-        <link rel="icon" href="/logo.jpeg" type="image/jpeg" />
-        <link rel="shortcut icon" href="/logo.jpeg" type="image/jpeg" />
-      </head>
       <body className="min-h-full flex flex-col">
         <ImageLoader>
           <Header />
